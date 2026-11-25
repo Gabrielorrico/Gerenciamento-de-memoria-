@@ -1,7 +1,10 @@
-CC = gcc
-FLAGS = -Wall -Wextra
 
-main.c: src/main.c
+CC = gcc
+FLAGS = -Wall -Wextra -pthread
+
+all: vm
+
+vm: src/main.c
 	${CC} src/main.c ${FLAGS} -o vm
 
 clean:
